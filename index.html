@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            background-color: #000;
+            color: white;
+            font-size: 1.5rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .card {
+            gap: 3px;
+            display: grid;
+            background-color: white;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            margin: 20px;
+        }
+
+
+        .block {
+            width: 100px;
+            height: 100px;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .block:hover {
+            background-color: #1e1e1e;
+            cursor: pointer;
+        }
+
+        .returnByGame {
+            margin-top: 50px;
+            padding: 10px 30px;
+            font-size: 2rem;
+            border: none;
+            background-color: #000;
+            color: white;
+            border: 2px solid #fff;
+            cursor: pointer;
+        }
+
+        .returnByGame:hover {
+            background-color: white;
+            border: 2px solid #fff;
+            color: black;
+            transition: all ease 0.4s;
+        }
+
+        p {
+            text-transform: uppercase;
+            color: red;
+        }
+
+        .flex {
+            width: 100%;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .Sla {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .linePadrao{
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="flex">
+            <div class="Sla">Vencedor:
+                <p class="warning"></p>
+            </div> <br>
+            <div class="Sla">Vez: <br>
+                <p class="stage"></p>
+            </div>
+        </div>
+        <div class="card">
+            <div data-item="a1" class="block"></div>
+            <div data-item="a2" class="block"></div>
+            <div data-item="a3" class="block"></div>
+
+            <div data-item="b1" class="block"></div>
+            <div data-item="b2" class="block"></div>
+            <div data-item="b3" class="block"></div>
+
+            <div data-item="c1" class="block"></div>
+            <div data-item="c2" class="block"></div>
+            <div data-item="c3" class="block"></div>
+        </div>
+
+        <button onclick="resetGame()" class="returnByGame">Restart Game</button>
+    </div>
+
+    <script src="/js/main.js"></script>
+
+    <!-- <script>
+        const matriz = [
+            [1, 2],
+            [3, 4],
+            [5, 6]
+        ];
+
+        // Loop principal (percorre as linhas)
+        for (let i = 0; i < matriz.length; i++) {
+            // Loop interno (percorre os elementos de cada sub-array)
+            for (let j = 0; j < matriz[i].length; j++) {
+                console.log(matriz[i][j]);
+            }
+        }
+
+    </script> -->
+</body>
+
+</html>
